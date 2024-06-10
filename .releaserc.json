@@ -1,6 +1,5 @@
 {
     "branches": ["main", "stage"],
-    "repositoryUrl": "https://github.com/vasugoriya/semantic-version",
     "plugins": [
         "./always-release.js",
         "@semantic-release/commit-analyzer",

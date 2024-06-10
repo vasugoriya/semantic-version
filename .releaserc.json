@@ -1,9 +1,23 @@
 {
-    "branches": ["main", "stage"],
+    "branches": [
+      {
+        "name": "main",
+        "prerelease": false
+      },
+      {
+        "name": "stage",
+        "prerelease": "stage"
+      }
+    ],
     "plugins": [
-        "./always-release.js",
-        "@semantic-release/commit-analyzer",
-        "@semantic-release/release-notes-generator",
-        "@semantic-release/github"
+      "@semantic-release/commit-analyzer",
+      "@semantic-release/release-notes-generator",
+      "@semantic-release/github",
+      [
+        "@semantic-release/exec",
+        {
+          "prepareCmd": "node set-version.js"
+        }
       ]
+    ]
   }

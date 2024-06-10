@@ -1,13 +1,11 @@
-name: Deploy Terraform
+name: Deploy Terraform Feature
 # on:
 #   workflow_dispatch:
 
 on:
-  pull_request:
+  push:
     branches:
-      - dev
-    types:
-      - closed
+      - feature/*
 
 permissions:
   contents: write

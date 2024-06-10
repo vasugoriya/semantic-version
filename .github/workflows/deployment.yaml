@@ -7,6 +7,9 @@ on:
   push:
     branches:
       - dev
+  pull_request:
+    types:
+      - closed
 
 permissions:
   contents: write
@@ -14,6 +17,7 @@ permissions:
 
 jobs:
   terraform-plan:
+    if: github.event.pull_request.merged == true
     runs-on: ubuntu-latest
 
     steps:

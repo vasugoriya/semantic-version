@@ -1,5 +1,4 @@
-name: Deploy Terraform
-
+name: Dev Deploy Terraform
 # on:
 #   workflow_dispatch:
 
@@ -37,7 +36,7 @@ jobs:
         AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
         AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
       run: terraform apply -auto-approve
-  
+
   release:
     needs: terraform-plan
     runs-on: ubuntu-latest

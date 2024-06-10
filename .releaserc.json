@@ -2,15 +2,7 @@
     "branches": ["main", "stage"],
     "repositoryUrl": "https://github.com/vasugoriya/semantic-version",
     "plugins": [
-      [
-        "@semantic-release/commit-analyzer",
-        {
-          "preset": "angular",
-          "releaseRules": [
-            {"type": "*", "release": "patch"}
-          ]
-        }
-      ],
+      "./always-release.js",
       "@semantic-release/release-notes-generator",
       "@semantic-release/changelog",
       "@semantic-release/github",

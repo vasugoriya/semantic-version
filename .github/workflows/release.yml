@@ -1,31 +1,35 @@
-name: Bump version and create tag
+name: Release
 
 on:
+  push:
+    branches:
+      - main
+      - stage
   pull_request:
     branches:
       - stage
-      - main
-  push:
-    branches:
-      - stage
-      - main
+
+permissions:
+  contents: write
+  issues: write
 
 jobs:
-  build:
+  release:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
+        uses: actions/checkout@v3
 
-      - name: Bump version and push tag
-        id: tag_version
-        uses: anothrNick/github-tag-action@v1
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: npm install --save-dev semantic-release @semantic-release/changelog @semantic-release/git @semantic-release/github
+
+      - name: Release
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
-        with:
-          default_bump: patch
-          tag_prefix: 'v'
-          release_branches: 'stage,main'
+        run: npx semantic-release

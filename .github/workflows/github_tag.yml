@@ -1,0 +1,31 @@
+# name: Bump version and create tag
+
+# on:
+#   pull_request:
+#     branches:
+#       - stage
+#       - main
+#   push:
+#     branches:
+#       - stage
+#       - main
+
+# jobs:
+#   build:
+#     runs-on: ubuntu-latest
+
+#     steps:
+#       - name: Checkout code
+#         uses: actions/checkout@v4
+#         with:
+#           fetch-depth: 0
+
+#       - name: Bump version and push tag
+#         id: tag_version
+#         uses: anothrNick/github-tag-action@v1
+#         env:
+#           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+#         with:
+#           default_bump: patch
+#           tag_prefix: 'v'
+#           release_branches: 'stage,main'

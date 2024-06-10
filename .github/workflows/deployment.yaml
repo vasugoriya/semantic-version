@@ -1,14 +1,14 @@
 name: Deploy Terraform
 
-# on:
-#   workflow_dispatch:
-
 on:
-  push:
-    branches:
-      - main
-      - stage
-      - dev
+  workflow_dispatch:
+
+# on:
+#   push:
+#     branches:
+#       - main
+#       - stage
+#       - dev
 
 permissions:
   contents: write

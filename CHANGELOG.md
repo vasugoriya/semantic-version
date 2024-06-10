@@ -1,3 +1,11 @@
+## [1.0.3](https://github.com/vasugoriya/semantic-version/compare/v1.0.2...v1.0.3) (2024-06-10)
+
+
+### Features
+
+* this is feature tag2 ([0dc05b6](https://github.com/vasugoriya/semantic-version/commit/0dc05b62ad05585a516ebacae35404198ef241da))
+* this is feature tag2 ([b3a762e](https://github.com/vasugoriya/semantic-version/commit/b3a762e63e35b631792d89972b39015004ac8710))
+
 ## [1.0.2](https://github.com/vasugoriya/semantic-version/compare/v1.0.1...v1.0.2) (2024-06-10)
 
 ## [1.0.1](https://github.com/vasugoriya/semantic-version/compare/v1.0.0...v1.0.1) (2024-06-10)

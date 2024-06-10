@@ -1,5 +1,4 @@
 name: Release with semantic tag
-
 on:
   push:
     branches:

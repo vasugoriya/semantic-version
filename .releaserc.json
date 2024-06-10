@@ -1,5 +1,6 @@
 {
     "branches": ["main", "stage"],
+    "repositoryUrl": "https://github.com/vasugoriya/semantic-version",
     "plugins": [
       "@semantic-release/commit-analyzer",
       "@semantic-release/release-notes-generator",
